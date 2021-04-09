@@ -1,0 +1,10 @@
+User No=2
+Template No=1233
+Update=,RC
+Locations=Location,QLDSKU,SAUSKU,TASSKU,VICSKUTMP,VICSKU,WAUSKU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+QLDSKU=QLDSKU,,0.5,,,,"QLD -   Total SKU"
+SAUSKU=SAUSKU,,0.5,,,,"SA -   Total SKU"
+TASSKU=TASSKU,,0.5,,,,"TAS -   Total SKU"
+VICSKUTMP=VICSKUTMP,,0.5,,,,"VIC -  Total  SKU"
+VICSKU=VICSKU,,0.5,,,,"VIC and SA -   Total SKU"
+WAUSKU=WAUSKU,,0.5,,,,"WA -  SKU"

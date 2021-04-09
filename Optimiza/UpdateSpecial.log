@@ -1,0 +1,13 @@
+Update Item Set 
+  ParetoCategory = "A"
+Where 
+  LocationNo in (1)
+AND ( 
+Criticality = 1
+ AND 
+ParetoCategory = "A"
+ )
+
+
+Done !!
+28/09/2010 8:48:28 AM

@@ -1,0 +1,408 @@
+object frmMain: TfrmMain
+  Left = 440
+  Top = 206
+  Width = 590
+  Height = 488
+  Caption = 'Forecast Accuracy Modeller'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 435
+    Width = 582
+    Height = 19
+    Panels = <>
+    SimplePanel = False
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 41
+    Width = 582
+    Height = 394
+    ActivePage = TabSheet2
+    Align = alClient
+    TabIndex = 1
+    TabOrder = 1
+    object TabSheet1: TTabSheet
+      Caption = 'General'
+      object Label1: TLabel
+        Left = 7
+        Top = 32
+        Width = 122
+        Height = 13
+        Caption = 'Safety Stock  Application:'
+      end
+      object Label2: TLabel
+        Left = 168
+        Top = 104
+        Width = 119
+        Height = 13
+        Caption = 'Increase Percentage by :'
+      end
+      object Label3: TLabel
+        Left = 342
+        Top = 104
+        Width = 8
+        Height = 13
+        Caption = '%'
+      end
+      object Label4: TLabel
+        Left = 342
+        Top = 156
+        Width = 8
+        Height = 13
+        Caption = '%'
+      end
+      object edtPath: TEdit
+        Left = 138
+        Top = 29
+        Width = 364
+        Height = 21
+        TabOrder = 0
+      end
+      object Button1: TButton
+        Left = 504
+        Top = 28
+        Width = 28
+        Height = 23
+        Caption = '...'
+        TabOrder = 1
+        OnClick = Button1Click
+      end
+      object grpIncrease: TRadioGroup
+        Left = 16
+        Top = 96
+        Width = 137
+        Height = 89
+        Caption = 'Percentage'
+        ItemIndex = 0
+        Items.Strings = (
+          'Increase'
+          'Descrease')
+        TabOrder = 2
+        OnClick = grpIncreaseClick
+      end
+      object edtPercentage: TEdit
+        Left = 295
+        Top = 101
+        Width = 40
+        Height = 21
+        TabOrder = 3
+      end
+      object chkCap: TCheckBox
+        Left = 168
+        Top = 152
+        Width = 113
+        Height = 17
+        Caption = 'Cap Percentage at '
+        TabOrder = 4
+        OnClick = chkCapClick
+      end
+      object edtCap: TEdit
+        Left = 295
+        Top = 152
+        Width = 40
+        Height = 21
+        Enabled = False
+        TabOrder = 5
+        Text = '100'
+      end
+      object BitBtn1: TBitBtn
+        Left = 448
+        Top = 280
+        Width = 75
+        Height = 25
+        Caption = 'Next'
+        TabOrder = 6
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Locations'
+      ImageIndex = 1
+      object GroupBox4: TGroupBox
+        Left = 13
+        Top = 6
+        Width = 545
+        Height = 321
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object Label5: TLabel
+          Left = 15
+          Top = 20
+          Width = 92
+          Height = 13
+          Caption = 'Available Locations'
+        end
+        object Label6: TLabel
+          Left = 301
+          Top = 20
+          Width = 91
+          Height = 13
+          Caption = 'Selected Locations'
+        end
+        object ListBox1: TListBox
+          Left = 12
+          Top = 42
+          Width = 236
+          Height = 260
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ItemHeight = 13
+          MultiSelect = True
+          ParentFont = False
+          TabOrder = 1
+        end
+        object ListBox3: TListBox
+          Left = 168
+          Top = 198
+          Width = 73
+          Height = 96
+          ItemHeight = 13
+          TabOrder = 0
+          Visible = False
+        end
+        object ListBox2: TListBox
+          Left = 296
+          Top = 42
+          Width = 236
+          Height = 260
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ItemHeight = 13
+          MultiSelect = True
+          ParentFont = False
+          TabOrder = 2
+        end
+        object ListBox4: TListBox
+          Left = 480
+          Top = 201
+          Width = 44
+          Height = 97
+          ItemHeight = 13
+          TabOrder = 3
+          Visible = False
+        end
+        object BitBtn16: TBitBtn
+          Left = 259
+          Top = 42
+          Width = 25
+          Height = 25
+          Hint = 'Move Right'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+          OnClick = BitBtn16Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+            0000000000000000000000000000000000000000000000000000C0C0C0C0C0C0
+            0000FFC0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF0000000000FF0000FF
+            0000FF0000FF0000FFC0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF0000000000FF0000FF0000FF0000FF0000FF0000FFC0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF0000000000FF0000FF
+            0000FF0000FF0000FFC0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C080
+            0000800000800000800000800000800000800000800000800000C0C0C0C0C0C0
+            0000FFC0C0C0C0C0C0C0C0C0C0C0C0800000FFFFFF800000800000FFFFFF8000
+            00800000FFFFFF800000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C080
+            0000800000800000800000800000800000800000800000800000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+        object BitBtn17: TBitBtn
+          Left = 259
+          Top = 277
+          Width = 25
+          Height = 25
+          Hint = 'Move Left'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 5
+          OnClick = BitBtn17Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C000000000000000000000000000000000000000000000
+            0000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF000000C0C0C0C0C0C0C0C0C00000
+            FFC0C0C0C0C0C0C0C0C0000000FFFFFF000000000000FFFFFF000000000000FF
+            FFFF000000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF000000C0C0C00000FF0000FF0000
+            FF0000FF0000FFC0C0C0000000C0C0C0000000000000C0C0C0000000000000FF
+            FFFF0000000000FF0000FF0000FF0000FF0000FF0000FFC0C0C0000000C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C00000FF0000FF0000
+            FF0000FF0000FFC0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0800000C0C0C0
+            800000800000C0C0C0800000800000C0C0C0800000C0C0C0C0C0C0C0C0C00000
+            FFC0C0C0C0C0C0C0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+        object BitBtn18: TBitBtn
+          Left = 259
+          Top = 120
+          Width = 25
+          Height = 25
+          Hint = 'Move ALL Right'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 6
+          OnClick = BitBtn18Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C000
+            00000000000000000000000000000000000000000000000000000000FF0000FF
+            0000FF0000FF0000FF0000FFC0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF000000C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF000000C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C080
+            00008000008000008000008000008000008000008000008000000000FF0000FF
+            0000FF0000FF0000FF0000FFC0C0C0800000FFFFFF800000800000FFFFFF8000
+            00800000FFFFFF800000C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C080
+            0000800000800000800000800000800000800000800000800000C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+        object BitBtn19: TBitBtn
+          Left = 259
+          Top = 199
+          Width = 25
+          Height = 25
+          Hint = 'Move ALL Left'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 7
+          OnClick = BitBtn19Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C000000000000000000000000000000000000000000000
+            0000000000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF0000000000FF0000FF0000FF0000
+            FF0000FF0000FFC0C0C0000000FFFFFF000000000000FFFFFF000000000000FF
+            FFFF000000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF000000C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C0000000C0C0C0000000000000C0C0C0000000000000FF
+            FFFF000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0800000C0C0C0
+            800000800000C0C0C0800000800000C0C0C08000000000FF0000FF0000FF0000
+            FF0000FF0000FFC0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+      end
+      object Button2: TButton
+        Left = 472
+        Top = 336
+        Width = 75
+        Height = 25
+        Caption = 'Button2'
+        TabOrder = 1
+        OnClick = Button2Click
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Parameter File'
+      ImageIndex = 2
+      object vleParameters: TValueListEditor
+        Left = 0
+        Top = 0
+        Width = 574
+        Height = 366
+        Align = alClient
+        Strings.Strings = (
+          'Executable Path='
+          'Increase='
+          'Percentage='
+          'Cap='
+          'Cap Percentage='
+          'Locations=')
+        TabOrder = 0
+        ColWidths = (
+          150
+          418)
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 582
+    Height = 41
+    Align = alTop
+    TabOrder = 2
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '*.exe'
+    FileName = '\Optimiza\SSCalcMP.exe'
+    Filter = 'Exe Files|*.exe'
+    InitialDir = '\Optimiza'
+    Title = 'SS Calc MP'
+    Left = 520
+    Top = 64
+  end
+end

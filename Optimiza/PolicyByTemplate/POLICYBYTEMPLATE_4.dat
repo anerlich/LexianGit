@@ -1,0 +1,14 @@
+User No=104
+Template No=7122
+Update=,RC,RP
+Locations=Location,CONREP,AUSPLN,NZLPLN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+TUKSKU=TUKSKU,,,,98,,"-      UK  Total SKU"
+EUKSKU=EUKSKU,,,,98,,"-      UK Export SKU"
+RUKSKU=RUKSKU,,,,98,,"-      UK Retail SKU"
+WUKSKU=WUKSKU,,,,98,,"-      UK Wholesale SKU"
+ADESKU=ADESKU,,1,1,,,,,"z DO NOT USE"
+WHOSKUNZL=WHOSKUNZL,,1,1,,,,,"z DO NOT USE"
+NATSKU=NATSKU,,1,1,,,,,"z DO NOT USE"
+AUSPLN=AUSPLN,,.46,.46,,,,,"-    Australia Planning"
+CONREP=CONREP,,.46,.46,,,,,"-     Consolidated Reporting"
+NZLPLN=NZLPLN,,.46,.46,,,,,"-    New Zealand Planning"

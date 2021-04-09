@@ -1,0 +1,516 @@
+Set Term !! ;
+
+Create Procedure UP_InsertNewItem(
+  SOURCELOCATIONCODE VARCHAR(10),
+  TARGETLOCATIONCODE VARCHAR(10) )
+as
+  declare variable xSourceLocationNo integer;
+  declare variable xTargetLocationNo integer;
+  Declare variable xPRODUCTNO INTEGER ;
+  Declare variable xINVENTORYMANAGER  INTEGER ;
+  Declare variable xPARETOCATEGORY    CHAR(1);
+  Declare variable xSTOCKINGINDICATOR CHAR(1);
+  Declare variable xSTATUS    CHAR(1);
+  Declare variable xAGE   INTEGER;
+  Declare variable xSTOCKONHAND   DOUBLE PRECISION;
+  Declare variable xSTOCKONORDER  DOUBLE PRECISION;
+  Declare variable xBACKORDER DOUBLE PRECISION;
+  Declare variable xSAFETYSTOCK   DOUBLE PRECISION;
+  Declare variable xLEADTIME  DOUBLE PRECISION;
+  Declare variable xREPLENISHMENTCYCLE    DOUBLE PRECISION;
+  Declare variable xREVIEWPERIOD  DOUBLE PRECISION;
+  Declare variable xMINIMUMORDERQUANTITY  DOUBLE PRECISION;
+  Declare variable xORDERMULTIPLES    DOUBLE PRECISION;
+  Declare variable xBINLEVEL  DOUBLE PRECISION;
+  Declare variable xAUTOBINITEM   CHAR(1);
+  Declare variable xCOSTPRICE DOUBLE PRECISION;
+  Declare variable xCOSTPER   DOUBLE PRECISION;
+  Declare variable xRETAILPRICE   DOUBLE PRECISION;
+  Declare variable xMANUALFORECAST    CHAR(1);
+  Declare variable xMANUALPOLICY  CHAR(1);
+  Declare variable xCRITICALITY   CHAR(1);
+  Declare variable xSUPPLIERNO1   INTEGER;
+  Declare variable xLEADTIMECATEGORY  CHAR(1);
+  Declare variable xLEADTIMEVARIANCE  DOUBLE PRECISION;
+  Declare variable xFORECASTVARIANCE  DOUBLE PRECISION;
+  Declare variable xFORECASTACCURACY  DOUBLE PRECISION;
+  Declare variable xDATEOFLASTSTOCKTAKE   TIMESTAMP;
+  Declare variable xSERVICELEVEL  DOUBLE PRECISION;
+  Declare variable xAVAILABILITY  DOUBLE PRECISION;
+  Declare variable xEARLYORDERARRIVALDATE TIMESTAMP;
+  Declare variable xPERIODSONHAND DOUBLE PRECISION;
+  Declare variable xPERIODSONORDER    DOUBLE PRECISION;
+  Declare variable xRECOMMENDEDORDER  DOUBLE PRECISION;
+  Declare variable xPARETOVALUE   DOUBLE PRECISION;
+  Declare variable xTASKLISTVALUE DOUBLE PRECISION;
+  Declare variable xFORWARDTASKLISTVALUE  DOUBLE PRECISION;
+  Declare variable xFORWARDLEADTIME   DOUBLE PRECISION;
+  Declare variable xFORWARD_LTSSRC    DOUBLE PRECISION;
+  Declare variable xFORWARD_LTSSRP    DOUBLE PRECISION;
+  Declare variable xFORWARD_SS    DOUBLE PRECISION;
+  Declare variable xFORWARD_SSRC  DOUBLE PRECISION;
+  Declare variable xFORWARD_SSHALFRC  DOUBLE PRECISION;
+  Declare variable xFORWARD_SSRP  DOUBLE PRECISION;
+  Declare variable xFORWARD_N DOUBLE PRECISION;
+  Declare variable xFORWARDX_N    DOUBLE PRECISION;
+  Declare variable xFORWARDX_SONHBACKO    DOUBLE PRECISION;
+  Declare variable xBARCODE   CHAR(20);
+  Declare variable xSTOCKINGUNITFACTOR    DOUBLE PRECISION;
+  Declare variable xUNITSSOLDTOTAL    DOUBLE PRECISION;
+  Declare variable xMIN_SS_UNITS  DOUBLE PRECISION;
+  Declare variable xFORWARDX_SONHBACKOSONO    DOUBLE PRECISION;
+  Declare variable xFC_FITCOEFFICIENT DOUBLE PRECISION;
+  Declare variable xFC_TRENDCOEFFICIENT   DOUBLE PRECISION;
+  Declare variable xFC_SEASONALCOEFFICIENT    DOUBLE PRECISION;
+  Declare variable xFC_MADCOEFFICIENT DOUBLE PRECISION;
+  Declare variable xFC_UNRELIABLECOEFFICIENT  DOUBLE PRECISION ;
+  Declare variable xFC_RMSE   DOUBLE PRECISION;
+  Declare variable xFC_MAD DOUBLE PRECISION;
+  Declare variable xFC_MAPE   DOUBLE PRECISION;
+  Declare variable xFC_MEANERROR  DOUBLE PRECISION;
+  Declare variable xFORECASTMETHOD    INTEGER;
+  Declare variable xSTOCKOUTCOUNT INTEGER ;
+  Declare variable xPREVIOUSSTOCKOUTCOUNT INTEGER ;
+  Declare variable xFC_ERRORVALUE DOUBLE PRECISION;
+  Declare variable xFC_TOURNAMENT CHAR(1) ;
+  Declare variable xEFFECTIVERC   DOUBLE PRECISION;
+  Declare variable xFORWARD_SSLT  DOUBLE PRECISION;
+  Declare variable xSTOCKONORDERINLT  DOUBLE PRECISION;
+  Declare variable xCENTRALWAREHOUSENO    INTEGER;
+  Declare variable xMODELVALUE    DOUBLE PRECISION;
+  Declare variable xNEWITEM   CHAR(1);
+  Declare variable xFORWARD_SSHALFRC_PLAIN    DOUBLE PRECISION;
+  Declare variable xFAIRSHARE DOUBLE PRECISION;
+  Declare variable xIMPORTED  CHAR(1);
+  Declare variable xOVERUNDERFORECAST CHAR(1);
+  Declare variable xROUNDPERIODSONHAND    INTEGER ;
+  Declare variable xECONOMICORDERQUANTITY DOUBLE PRECISION;
+  Declare variable xSTATSCATEGORYNO   INTEGER ;
+  Declare variable xEXCESSVALUE   DOUBLE PRECISION;
+  Declare variable xSHORTFALLVALUE    DOUBLE PRECISION;
+  Declare variable xUSERDOUBLE1   DOUBLE PRECISION ;
+  Declare variable xUSERDOUBLE2   DOUBLE PRECISION ;
+  Declare variable xUSERDOUBLE3   DOUBLE PRECISION ;
+  Declare variable xUSERDOUBLE4   DOUBLE PRECISION ;
+  Declare variable xUSERDOUBLE5   DOUBLE PRECISION ;
+  Declare variable xUSERCHAR1  CHAR(256);
+  Declare variable xUSERCHAR2 CHAR(256);
+  Declare variable xUSERCHAR3 CHAR(256);
+  Declare variable xUSERCHAR4 CHAR(256);
+  Declare variable xUSERCHAR5 CHAR(256);
+  Declare variable xUSERDATE1 TIMESTAMP;
+  Declare variable xUSERDATE2 TIMESTAMP;
+  Declare variable xUSERDATE3 TIMESTAMP;
+  Declare variable xUSERDATE4 TIMESTAMP;
+  Declare variable xUSERDATE5 TIMESTAMP;
+  Declare variable xUSERINTEGER1  INTEGER ;
+  Declare variable xUSERINTEGER2  INTEGER ;
+  Declare variable xUSERINTEGER3  INTEGER ;
+  Declare variable xUSERINTEGER4 INTEGER ;
+  Declare variable xUSERINTEGER5 INTEGER ;
+  Declare variable xCONSOLIDATEDBRANCHORDERS  DOUBLE PRECISION;
+  Declare variable xLOSTSALES DOUBLE PRECISION ;
+  Declare variable xGROUPMAJOR    INTEGER;
+  Declare variable xGROUPMINOR1   INTEGER;
+  Declare variable xGROUPMINOR2   INTEGER;
+  Declare variable xFORWARDX_SONHBACKOSONOINLT    DOUBLE PRECISION;
+  Declare variable xSAFETYSTOCKCALCIND    CHAR(1);
+  Declare variable xTEMPAUTOBINLEVEL  CHAR(1);
+  Declare variable xAUTOBINLEVEL  CHAR(1) ;
+  Declare variable xROUNDUPFROM   DOUBLE PRECISION ;
+  Declare variable xPROFILECATEGORY   CHAR(1);
+
+begin
+  Select LocationNO From Location where LocationCode =
+      :TARGETLOCATIONCODE
+      into :xTargetLocationNo;
+  Select LocationNO From Location where LocationCode =
+      :SOURCELOCATIONCODE
+      into :xSourceLocationNo;
+
+For Select PRODUCTNO
+   ,INVENTORYMANAGER
+   ,PARETOCATEGORY
+   ,STOCKINGINDICATOR
+   ,STATUS
+   ,AGE
+   ,STOCKONHAND
+   ,STOCKONORDER
+   ,BACKORDER
+   ,SAFETYSTOCK
+   ,LEADTIME
+   ,REPLENISHMENTCYCLE
+   ,REVIEWPERIOD
+   ,MINIMUMORDERQUANTITY
+   ,ORDERMULTIPLES
+   ,BINLEVEL
+   ,AUTOBINITEM
+   ,COSTPRICE
+   ,COSTPER
+   ,RETAILPRICE
+   ,MANUALFORECAST
+   ,MANUALPOLICY
+   ,CRITICALITY
+   ,SUPPLIERNO1
+   ,LEADTIMECATEGORY
+   ,LEADTIMEVARIANCE
+   ,FORECASTVARIANCE
+   ,FORECASTACCURACY
+   ,DATEOFLASTSTOCKTAKE
+   ,SERVICELEVEL
+   ,AVAILABILITY
+   ,EARLYORDERARRIVALDATE
+   ,PERIODSONHAND
+   ,PERIODSONORDER
+   ,RECOMMENDEDORDER
+   ,PARETOVALUE
+   ,TASKLISTVALUE
+   ,BARCODE
+   ,STOCKINGUNITFACTOR
+   ,UNITSSOLDTOTAL
+   ,MIN_SS_UNITS
+   ,FORECASTMETHOD
+   ,STOCKOUTCOUNT
+   ,PREVIOUSSTOCKOUTCOUNT
+   ,FC_ERRORVALUE
+   ,FC_TOURNAMENT
+   ,EFFECTIVERC
+   ,FORWARD_SSLT
+   ,STOCKONORDERINLT
+   ,CENTRALWAREHOUSENO
+   ,MODELVALUE
+   ,NEWITEM
+   ,FAIRSHARE
+   ,IMPORTED
+   ,OVERUNDERFORECAST
+   ,ROUNDPERIODSONHAND
+   ,ECONOMICORDERQUANTITY
+   ,STATSCATEGORYNO
+   ,EXCESSVALUE
+   ,SHORTFALLVALUE
+   ,CONSOLIDATEDBRANCHORDERS
+   ,LOSTSALES
+   ,GROUPMAJOR
+   ,GROUPMINOR1
+   ,GROUPMINOR2
+   ,FORWARDX_SONHBACKOSONOINLT
+   ,SAFETYSTOCKCALCIND
+   ,TEMPAUTOBINLEVEL
+   ,AUTOBINLEVEL
+   ,ROUNDUPFROM
+   ,USERINTEGER1
+   ,USERINTEGER2
+   ,USERINTEGER3
+   ,USERINTEGER4
+   ,USERINTEGER5
+   ,USERDATE1
+   ,USERDATE2
+   ,USERDATE3
+   ,USERDATE4
+   ,USERDATE5
+   ,USERCHAR1
+   ,USERCHAR2
+   ,USERCHAR3
+   ,USERCHAR4
+   ,USERCHAR5
+   ,USERDOUBLE1
+   ,USERDOUBLE2
+   ,USERDOUBLE3
+   ,USERDOUBLE4
+   ,USERDOUBLE5
+   ,PROFILECATEGORY
+
+ From Item
+  where Locationno = :xSourceLocationNo
+   and productno not in (Select ProductNo from Item 
+     where LocationNo = :xTargetLocationNo)
+ Into
+     :xPRODUCTNO
+   , :xINVENTORYMANAGER
+   , :xPARETOCATEGORY
+   , :xSTOCKINGINDICATOR
+   , :xSTATUS
+   , :xAGE
+   , :xSTOCKONHAND
+   , :xSTOCKONORDER
+   , :xBACKORDER
+   , :xSAFETYSTOCK
+   , :xLEADTIME
+   , :xREPLENISHMENTCYCLE
+   , :xREVIEWPERIOD
+   , :xMINIMUMORDERQUANTITY
+   , :xORDERMULTIPLES
+   , :xBINLEVEL
+   , :xAUTOBINITEM
+   , :xCOSTPRICE
+   , :xCOSTPER
+   , :xRETAILPRICE
+   , :xMANUALFORECAST
+   , :xMANUALPOLICY
+   , :xCRITICALITY
+   , :xSUPPLIERNO1
+   , :xLEADTIMECATEGORY
+   , :xLEADTIMEVARIANCE
+   , :xFORECASTVARIANCE
+   , :xFORECASTACCURACY
+   , :xDATEOFLASTSTOCKTAKE
+   , :xSERVICELEVEL
+   , :xAVAILABILITY
+   , :xEARLYORDERARRIVALDATE
+   , :xPERIODSONHAND
+   , :xPERIODSONORDER
+   , :xRECOMMENDEDORDER
+   , :xPARETOVALUE
+   , :xTASKLISTVALUE
+   , :xBARCODE
+   , :xSTOCKINGUNITFACTOR
+   , :xUNITSSOLDTOTAL
+   , :xMIN_SS_UNITS
+   , :xFORECASTMETHOD
+   , :xSTOCKOUTCOUNT
+   , :xPREVIOUSSTOCKOUTCOUNT
+   , :xFC_ERRORVALUE
+   , :xFC_TOURNAMENT
+   , :xEFFECTIVERC
+   , :xFORWARD_SSLT
+   , :xSTOCKONORDERINLT
+   , :xCENTRALWAREHOUSENO
+   , :xMODELVALUE
+   , :xNEWITEM
+   , :xFAIRSHARE
+   , :xIMPORTED
+   , :xOVERUNDERFORECAST
+   , :xROUNDPERIODSONHAND
+   , :xECONOMICORDERQUANTITY
+   , :xSTATSCATEGORYNO
+   , :xEXCESSVALUE
+   , :xSHORTFALLVALUE
+   , :xCONSOLIDATEDBRANCHORDERS
+   , :xLOSTSALES
+   , :xGROUPMAJOR
+   , :xGROUPMINOR1
+   , :xGROUPMINOR2
+   , :xFORWARDX_SONHBACKOSONOINLT
+   , :xSAFETYSTOCKCALCIND
+   , :xTEMPAUTOBINLEVEL
+   , :xAUTOBINLEVEL
+   , :xROUNDUPFROM
+   , :xUSERINTEGER1
+   , :xUSERINTEGER2
+   , :xUSERINTEGER3
+   , :xUSERINTEGER4
+   , :xUSERINTEGER5
+   , :xUSERDATE1
+   , :xUSERDATE2
+   , :xUSERDATE3
+   , :xUSERDATE4
+   , :xUSERDATE5
+   , :xUSERCHAR1
+   , :xUSERCHAR2
+   , :xUSERCHAR3
+   , :xUSERCHAR4
+   , :xUSERCHAR5
+   , :xUSERDOUBLE1
+   , :xUSERDOUBLE2
+   , :xUSERDOUBLE3
+   , :xUSERDOUBLE4
+   , :xUSERDOUBLE5
+   , :xPROFILECATEGORY
+
+  Do Begin
+
+    Insert into Item (ItemNo, LocationNo
+           ,PRODUCTNO
+           ,INVENTORYMANAGER
+           ,PARETOCATEGORY
+           ,STOCKINGINDICATOR
+           ,STATUS
+           ,AGE
+           ,STOCKONHAND
+           ,STOCKONORDER
+           ,BACKORDER
+           ,SAFETYSTOCK
+           ,LEADTIME
+           ,REPLENISHMENTCYCLE
+           ,REVIEWPERIOD
+           ,MINIMUMORDERQUANTITY
+           ,ORDERMULTIPLES
+           ,BINLEVEL
+           ,AUTOBINITEM
+           ,COSTPRICE
+           ,COSTPER
+           ,RETAILPRICE
+           ,MANUALFORECAST
+           ,MANUALPOLICY
+           ,CRITICALITY
+           ,SUPPLIERNO1
+           ,LEADTIMECATEGORY
+           ,LEADTIMEVARIANCE
+           ,FORECASTVARIANCE
+           ,FORECASTACCURACY
+           ,DATEOFLASTSTOCKTAKE
+           ,SERVICELEVEL
+           ,AVAILABILITY
+           ,EARLYORDERARRIVALDATE
+           ,PERIODSONHAND
+           ,PERIODSONORDER
+           ,RECOMMENDEDORDER
+           ,PARETOVALUE
+           ,TASKLISTVALUE
+           ,BARCODE
+           ,STOCKINGUNITFACTOR
+           ,UNITSSOLDTOTAL
+           ,MIN_SS_UNITS
+           ,FORECASTMETHOD
+           ,STOCKOUTCOUNT
+           ,PREVIOUSSTOCKOUTCOUNT
+           ,FC_ERRORVALUE
+           ,FC_TOURNAMENT
+           ,EFFECTIVERC
+           ,FORWARD_SSLT
+           ,STOCKONORDERINLT
+           ,CENTRALWAREHOUSENO
+           ,MODELVALUE
+           ,NEWITEM
+           ,FAIRSHARE
+           ,IMPORTED
+           ,OVERUNDERFORECAST
+           ,ROUNDPERIODSONHAND
+           ,ECONOMICORDERQUANTITY
+           ,STATSCATEGORYNO
+           ,EXCESSVALUE
+           ,SHORTFALLVALUE
+           ,CONSOLIDATEDBRANCHORDERS
+           ,LOSTSALES
+           ,GROUPMAJOR
+           ,GROUPMINOR1
+           ,GROUPMINOR2
+           ,FORWARDX_SONHBACKOSONOINLT
+           ,SAFETYSTOCKCALCIND
+           ,TEMPAUTOBINLEVEL
+           ,AUTOBINLEVEL
+           ,ROUNDUPFROM
+           ,USERINTEGER1
+           ,USERINTEGER2
+           ,USERINTEGER3
+           ,USERINTEGER4
+           ,USERINTEGER5
+           ,USERDATE1
+           ,USERDATE2
+           ,USERDATE3
+           ,USERDATE4
+           ,USERDATE5
+           ,USERCHAR1
+           ,USERCHAR2
+           ,USERCHAR3
+           ,USERCHAR4
+           ,USERCHAR5
+           ,USERDOUBLE1
+           ,USERDOUBLE2
+           ,USERDOUBLE3
+           ,USERDOUBLE4
+           ,USERDOUBLE5
+           ,PROFILECATEGORY)
+
+       Values (GEN_ID(Item_Seqno,1),:xTargetLocationNo
+           , :xPRODUCTNO
+           , :xINVENTORYMANAGER
+           , :xPARETOCATEGORY
+           , :xSTOCKINGINDICATOR
+           , :xSTATUS
+           , :xAGE
+           , :xSTOCKONHAND
+           , :xSTOCKONORDER
+           , :xBACKORDER
+           , :xSAFETYSTOCK
+           , :xLEADTIME
+           , :xREPLENISHMENTCYCLE
+           , :xREVIEWPERIOD
+           , :xMINIMUMORDERQUANTITY
+           , :xORDERMULTIPLES
+           , :xBINLEVEL
+           , :xAUTOBINITEM
+           , :xCOSTPRICE
+           , :xCOSTPER
+           , :xRETAILPRICE
+           , :xMANUALFORECAST
+           , :xMANUALPOLICY
+           , :xCRITICALITY
+           , :xSUPPLIERNO1
+           , :xLEADTIMECATEGORY
+           , :xLEADTIMEVARIANCE
+           , :xFORECASTVARIANCE
+           , :xFORECASTACCURACY
+           , :xDATEOFLASTSTOCKTAKE
+           , :xSERVICELEVEL
+           , :xAVAILABILITY
+           , :xEARLYORDERARRIVALDATE
+           , :xPERIODSONHAND
+           , :xPERIODSONORDER
+           , :xRECOMMENDEDORDER
+           , :xPARETOVALUE
+           , :xTASKLISTVALUE
+           , :xBARCODE
+           , :xSTOCKINGUNITFACTOR
+           , :xUNITSSOLDTOTAL
+           , :xMIN_SS_UNITS
+           , :xFORECASTMETHOD
+           , :xSTOCKOUTCOUNT
+           , :xPREVIOUSSTOCKOUTCOUNT
+           , :xFC_ERRORVALUE
+           , :xFC_TOURNAMENT
+           , :xEFFECTIVERC
+           , :xFORWARD_SSLT
+           , :xSTOCKONORDERINLT
+           , :xCENTRALWAREHOUSENO
+           , :xMODELVALUE
+           , :xNEWITEM
+           , :xFAIRSHARE
+           , :xIMPORTED
+           , :xOVERUNDERFORECAST
+           , :xROUNDPERIODSONHAND
+           , :xECONOMICORDERQUANTITY
+           , :xSTATSCATEGORYNO
+           , :xEXCESSVALUE
+           , :xSHORTFALLVALUE
+           , :xCONSOLIDATEDBRANCHORDERS
+           , :xLOSTSALES
+           , :xGROUPMAJOR
+           , :xGROUPMINOR1
+           , :xGROUPMINOR2
+           , :xFORWARDX_SONHBACKOSONOINLT
+           , :xSAFETYSTOCKCALCIND
+           , :xTEMPAUTOBINLEVEL
+           , :xAUTOBINLEVEL
+           , :xROUNDUPFROM
+           , :xUSERINTEGER1
+           , :xUSERINTEGER2
+           , :xUSERINTEGER3
+           , :xUSERINTEGER4
+           , :xUSERINTEGER5
+           , :xUSERDATE1
+           , :xUSERDATE2
+           , :xUSERDATE3
+           , :xUSERDATE4
+           , :xUSERDATE5
+           , :xUSERCHAR1
+           , :xUSERCHAR2
+           , :xUSERCHAR3
+           , :xUSERCHAR4
+           , :xUSERCHAR5
+           , :xUSERDOUBLE1
+           , :xUSERDOUBLE2
+           , :xUSERDOUBLE3
+           , :xUSERDOUBLE4
+           , :xUSERDOUBLE5
+           , :xPROFILECATEGORY);
+
+
+
+  End
+
+
+end!!
+
+Set Term ; !!
+

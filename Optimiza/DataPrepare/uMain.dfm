@@ -1,0 +1,151 @@
+object frmMain: TfrmMain
+  Left = 430
+  Top = 190
+  Width = 646
+  Height = 298
+  Caption = 'Convert'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 96
+    Top = 56
+    Width = 28
+    Height = 13
+    Caption = 'In File'
+  end
+  object Label2: TLabel
+    Left = 96
+    Top = 92
+    Width = 36
+    Height = 13
+    Caption = 'Out File'
+  end
+  object Edit1: TEdit
+    Left = 152
+    Top = 56
+    Width = 329
+    Height = 21
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 152
+    Top = 88
+    Width = 321
+    Height = 21
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 488
+    Top = 56
+    Width = 33
+    Height = 25
+    Caption = '...'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 488
+    Top = 88
+    Width = 33
+    Height = 25
+    Caption = '...'
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 245
+    Width = 638
+    Height = 19
+    Panels = <
+      item
+        Text = 'Records'
+        Width = 80
+      end
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 544
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'Convert'
+    TabOrder = 5
+    OnClick = BitBtn1Click
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0840000840000C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0840000848400840000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C084000000FFFF848400840000C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C084000000FFFF848400840000C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C084000084000084000084000000FFFF84
+      8400840000C0C0C0C0C0C0840000C0C0C0C0C0C0C0C0C0840000C0C0C0C0C0C0
+      84000000FFFF00FFFF00FFFF00FFFF00FFFF848400840000C0C0C0C0C0C08400
+      00C0C0C0840000C0C0C0C0C0C0C0C0C084000000FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF840000C0C0C0C0C0C0C0C0C0840000C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C084000000FFFF848400840000840000840000840000C0C0C0C0C0C08400
+      00C0C0C0840000C0C0C0C0C0C0C0C0C0C0C0C084000000FFFF00FFFF84840084
+      0000C0C0C0C0C0C0C0C0C0840000C0C0C0C0C0C0C0C0C0840000C0C0C0840000
+      84000084000084000000FFFF00FFFF848400840000C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C084000000FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF848400840000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      84000000FFFF00FFFF00FFFF00FFFF00FFFF00FFFF848400840000C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C084000000FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF848400840000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      8400008400008400008400008400008400008400008400008400008400008400
+      00C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 152
+    Top = 120
+    Width = 225
+    Height = 81
+    Caption = 'Output'
+    ItemIndex = 0
+    Items.Strings = (
+      'CSV Format'
+      'Flat File Format')
+    TabOrder = 6
+  end
+  object BitBtn2: TBitBtn
+    Left = 456
+    Top = 216
+    Width = 75
+    Height = 25
+    TabOrder = 7
+    OnClick = BitBtn2Click
+    Kind = bkCancel
+  end
+  object BitBtn3: TBitBtn
+    Left = 544
+    Top = 216
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 8
+    OnClick = BitBtn3Click
+    Kind = bkOK
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'All Files (*.*)|*.*'
+    Left = 392
+    Top = 152
+  end
+end

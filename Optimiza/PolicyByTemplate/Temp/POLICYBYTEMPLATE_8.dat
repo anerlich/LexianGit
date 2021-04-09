@@ -1,0 +1,13 @@
+User No=2
+Template No=1241
+Update=,RC,RP,TSL
+Locations=Location,NATSKU,VICSKUTMP,VICSKU,WAUSKU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+NSWSKU=NSWSKU,,0.25,0.25,
+QLDSKU=QLDSKU,,0.25,0.25,
+SAUSKU=SAUSKU,,0.25,0.25,
+TASSKU=TASSKU,,0.25,0.25,
+WAUSKU=WAUSKU,,1,1,98,"WA -  SKU"
+VICSKU=VICSKU,,1,1,98,"VIC and SA -   Total SKU"
+VICSKUTMP=VICSKUTMP,,1,1,98,"VIC -  Total  SKU"
+NATSKUCWH=NATSKUCWH,,0.25,0.25,
+NATSKU=NATSKU,,1,1,98,"- Sleepmaker National SKU"

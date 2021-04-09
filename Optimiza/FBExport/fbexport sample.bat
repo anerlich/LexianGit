@@ -1,0 +1,1 @@
+fbexport -Si -Q "Select * from UT_DISAGMETHOD Where ID < 11" -D "D:\Optimiza\WWFORECAST\DataBase\WWFORECAST.GDB" -U sysdba -P masterkey -F UT_DISAGMETHOD.sql

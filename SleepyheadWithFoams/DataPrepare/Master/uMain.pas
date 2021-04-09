@@ -23,6 +23,7 @@
 // Version 3.2  - Add headboards to model list
 // Version 3.3  - remove output to VICSKUTMP
 // Version 3.4  - include MinSSUnits field
+// Version 3.5  - include 5 more fields IMSSITE,IMSWHSE,IMFGMODEL,IMFGRANGE,IMUWEIGHT, only 4 used (not IMSWHSE)
 
 unit uMain;
 interface
@@ -57,7 +58,12 @@ Const
     _Supplier=22;
     _SupplierName=23;
     _MinSSUnits=24;
-    _AllFields=24;
+    _SSite=25; //DRP Source
+    _SWhse=26; //not in use at 04/2021
+    _FGModel=27;
+    _FGRange=28;
+    _UWeight=29;
+    _AllFields=29;
 
 type
   TString = class(TObject)
@@ -406,7 +412,12 @@ begin
               SkuOutStr := SkuOutStr + ',' + StyleColour + ',' + Datarecord[_Supplier] + ','  + Datarecord[_SupplierName]
                     + ','  + SF
                     + ','  + StkInd
-                    + ',' + DataRecord[_MinSSUnits];
+                    + ',' + DataRecord[_MinSSUnits]
+                    + ',' + DataRecord[_SSite]
+                    + ',' + DataRecord[_SWhse]
+                    + ',' + DataRecord[_FGModel]
+                    + ',' + DataRecord[_FGRange]
+                    + ',' + DataRecord[_UWeight];
 
               StyleOutStr := GetOutStr_SL(OutStr,
                                          DataRecord[_Description],
@@ -418,7 +429,12 @@ begin
               StyleOutStr := StyleOutStr + ',' + StyleColour+ ',' + Datarecord[_Supplier] + ','  + Datarecord[_SupplierName]
                     + ','  + SF
                     + ','  + StkInd
-                    + ',' + DataRecord[_MinSSUnits];
+                    + ',' + DataRecord[_MinSSUnits]
+                    + ',' + DataRecord[_SSite]
+                    + ',' + DataRecord[_SWhse]
+                    + ',' + DataRecord[_FGModel]
+                    + ',' + DataRecord[_FGRange]
+                    + ',' + DataRecord[_UWeight];
             end;
 
  //-----------------------------------------------

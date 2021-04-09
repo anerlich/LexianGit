@@ -1,0 +1,2307 @@
+object Form1: TForm1
+  Left = 283
+  Top = 168
+  Width = 696
+  Height = 548
+  Caption = 'Update Special '
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Bevel1: TBevel
+    Left = 0
+    Top = 0
+    Width = 688
+    Height = 3
+    Align = alTop
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 3
+    Width = 688
+    Height = 472
+    ActivePage = shtCriteria
+    Align = alClient
+    TabIndex = 2
+    TabOrder = 0
+    object shtData: TTabSheet
+      Caption = 'Data to Update'
+      OnExit = shtDataExit
+      object BitBtn1: TBitBtn
+        Left = 584
+        Top = 398
+        Width = 75
+        Height = 25
+        TabOrder = 0
+        OnClick = BitBtn1Click
+        Kind = bkCancel
+      end
+      object CheckBox1: TCheckBox
+        Left = 9
+        Top = 28
+        Width = 145
+        Height = 17
+        Caption = 'Update Pareto Category'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+        OnClick = CheckBox1Click
+      end
+      object RadioGroup1: TRadioGroup
+        Left = 9
+        Top = 53
+        Width = 137
+        Height = 167
+        Caption = 'Set Pareto Category to:'
+        Enabled = False
+        ItemIndex = 0
+        Items.Strings = (
+          'A'
+          'B'
+          'C'
+          'D'
+          'E'
+          'F'
+          'M'
+          'X')
+        TabOrder = 2
+      end
+      object CheckBox2: TCheckBox
+        Left = 169
+        Top = 28
+        Width = 153
+        Height = 17
+        Caption = 'Update Stocking Indicator'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+        OnClick = CheckBox2Click
+      end
+      object RadioGroup2: TRadioGroup
+        Left = 169
+        Top = 53
+        Width = 145
+        Height = 92
+        Caption = 'Set to:'
+        Enabled = False
+        ItemIndex = 0
+        Items.Strings = (
+          'Stocked'
+          'Non-Stocked')
+        TabOrder = 4
+      end
+      object BitBtn10: TBitBtn
+        Left = 496
+        Top = 398
+        Width = 75
+        Height = 25
+        Caption = 'Next'
+        TabOrder = 5
+        OnClick = BitBtn10Click
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000808000000000
+          0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000000000000000000000000000000000000808000008080
+          000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          0000808000008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000000000000000000000000000000000000808000008080
+          000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000808000000000
+          0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+      end
+      object RadioGroup3: TRadioGroup
+        Left = 337
+        Top = 53
+        Width = 153
+        Height = 92
+        Caption = 'Lead Time Category'
+        Enabled = False
+        ItemIndex = 1
+        Items.Strings = (
+          'Short'
+          'Medium'
+          'Long')
+        TabOrder = 6
+      end
+      object CheckBox3: TCheckBox
+        Left = 337
+        Top = 28
+        Width = 153
+        Height = 17
+        Caption = 'Update Lead Time Category'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 7
+        OnClick = CheckBox3Click
+      end
+      object GroupBox3: TGroupBox
+        Left = 9
+        Top = 258
+        Width = 211
+        Height = 73
+        Caption = 'Review Period'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 8
+        object ComboBox1: TComboBox
+          Left = 8
+          Top = 32
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          TabOrder = 0
+          Text = '(Don'#39't Update)'
+          OnChange = ComboBox1Change
+          Items.Strings = (
+            '(Don'#39't Update)'
+            'Daily (0.04)'
+            'Weekly (0.25)'
+            'Fortnightly (0.5)'
+            'Monthly (1.0)'
+            'Custom')
+        end
+        object MaskEdit2: TMaskEdit
+          Left = 160
+          Top = 32
+          Width = 41
+          Height = 21
+          EditMask = '9.99;1;0'
+          MaxLength = 4
+          TabOrder = 1
+          Text = ' .  '
+          Visible = False
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 337
+        Top = 156
+        Width = 153
+        Height = 64
+        TabOrder = 9
+        object CheckBox4: TCheckBox
+          Left = 13
+          Top = 24
+          Width = 132
+          Height = 17
+          Caption = 'Set Lead Time:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBox4Click
+        end
+        object MaskEdit1: TMaskEdit
+          Left = 112
+          Top = 21
+          Width = 29
+          Height = 21
+          Enabled = False
+          EditMask = '9.99;1;0'
+          MaxLength = 4
+          TabOrder = 1
+          Text = ' .  '
+        end
+      end
+      object GroupBox6: TGroupBox
+        Left = 236
+        Top = 258
+        Width = 211
+        Height = 73
+        Caption = 'Replenishment Cycle'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 10
+        object ComboBox2: TComboBox
+          Left = 8
+          Top = 32
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          TabOrder = 0
+          Text = '(Don'#39't Update)'
+          OnChange = ComboBox2Change
+          Items.Strings = (
+            '(Don'#39't Update)'
+            'Custom')
+        end
+        object MaskEdit3: TMaskEdit
+          Left = 160
+          Top = 32
+          Width = 41
+          Height = 21
+          EditMask = '9.99;1;0'
+          MaxLength = 4
+          TabOrder = 1
+          Text = ' .  '
+          Visible = False
+        end
+      end
+      object GroupBox7: TGroupBox
+        Left = 168
+        Top = 156
+        Width = 145
+        Height = 64
+        Caption = 'Manual Policy'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 11
+        object ComboBox3: TComboBox
+          Left = 10
+          Top = 24
+          Width = 112
+          Height = 21
+          ItemHeight = 13
+          TabOrder = 0
+          Text = '(Don'#39't Update)'
+          Items.Strings = (
+            '(Don'#39't Update)'
+            'Yes'
+            'No')
+        end
+      end
+      object GroupBox8: TGroupBox
+        Left = 512
+        Top = 156
+        Width = 161
+        Height = 64
+        Caption = 'Manual Forecast'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 12
+        object ComboBox4: TComboBox
+          Left = 10
+          Top = 24
+          Width = 112
+          Height = 21
+          ItemHeight = 13
+          TabOrder = 0
+          Text = '(Don'#39't Update)'
+          Items.Strings = (
+            '(Don'#39't Update)'
+            'Yes'
+            'No')
+        end
+      end
+      object GroupBox9: TGroupBox
+        Left = 512
+        Top = 53
+        Width = 161
+        Height = 92
+        Caption = 'Supplier Order'
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 13
+        object Label4: TLabel
+          Left = 16
+          Top = 28
+          Width = 70
+          Height = 13
+          Caption = 'Order Minimum'
+        end
+        object Label5: TLabel
+          Left = 16
+          Top = 60
+          Width = 65
+          Height = 13
+          Caption = 'Order Multiple'
+        end
+        object edtMin: TExtEdit
+          Left = 96
+          Top = 24
+          Width = 41
+          Height = 21
+          TabOrder = 0
+          Text = '1'
+          Kind = eekNone
+          Valid = valNone
+          MinValue = 1
+          FormatOnExit = False
+          PlaneOnEnter = False
+          ValidOnExit = False
+        end
+        object edtMult: TExtEdit
+          Left = 96
+          Top = 58
+          Width = 41
+          Height = 21
+          TabOrder = 1
+          Text = '1'
+          Kind = eekNone
+          Valid = valNone
+          MinValue = 1
+          FormatOnExit = False
+          PlaneOnEnter = False
+          ValidOnExit = False
+        end
+      end
+      object CheckBox5: TCheckBox
+        Left = 512
+        Top = 31
+        Width = 153
+        Height = 17
+        Caption = 'Update Supplier Order Info'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 14
+        OnClick = CheckBox5Click
+      end
+      object GroupBox10: TGroupBox
+        Left = 462
+        Top = 258
+        Width = 211
+        Height = 73
+        Caption = 'Target Service Level'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 15
+        object Label6: TLabel
+          Left = 195
+          Top = 35
+          Width = 8
+          Height = 13
+          Caption = '%'
+          Visible = False
+        end
+        object ComboBox5: TComboBox
+          Left = 8
+          Top = 32
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          TabOrder = 0
+          Text = '(Don'#39't Update)'
+          OnChange = ComboBox5Change
+          Items.Strings = (
+            '(Don'#39't Update)'
+            'Custom')
+        end
+        object MaskEdit6: TMaskEdit
+          Left = 160
+          Top = 32
+          Width = 31
+          Height = 21
+          EditMask = '99.9;1;0'
+          MaxLength = 4
+          TabOrder = 1
+          Text = '  . '
+          Visible = False
+        end
+      end
+      object GroupBox11: TGroupBox
+        Left = 465
+        Top = 332
+        Width = 153
+        Height = 64
+        TabOrder = 16
+        object CheckBox6: TCheckBox
+          Left = 13
+          Top = 24
+          Width = 132
+          Height = 17
+          Caption = 'Set Bin Level:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBox6Click
+        end
+        object edtBinLevel: TExtEdit
+          Left = 104
+          Top = 22
+          Width = 41
+          Height = 21
+          Enabled = False
+          TabOrder = 1
+          Text = '1'
+          Kind = eekNone
+          Valid = valNone
+          MinValue = 1
+          FormatOnExit = False
+          PlaneOnEnter = False
+          ValidOnExit = False
+        end
+      end
+      object GroupBox12: TGroupBox
+        Left = 9
+        Top = 338
+        Width = 211
+        Height = 73
+        Caption = 'Safety Stock'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 17
+        object ComboBox6: TComboBox
+          Left = 8
+          Top = 32
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          TabOrder = 0
+          Text = '(Don'#39't Update)'
+          OnChange = ComboBox6Change
+          Items.Strings = (
+            '(Don'#39't Update)'
+            'Custom')
+        end
+        object MaskEdit4: TMaskEdit
+          Left = 160
+          Top = 32
+          Width = 41
+          Height = 21
+          EditMask = '9.99;1;0'
+          MaxLength = 4
+          TabOrder = 1
+          Text = ' .  '
+          Visible = False
+        end
+      end
+      object GroupBox13: TGroupBox
+        Left = 241
+        Top = 340
+        Width = 153
+        Height = 64
+        TabOrder = 18
+        object CheckBox7: TCheckBox
+          Left = 13
+          Top = 24
+          Width = 97
+          Height = 17
+          Caption = 'Set Criticality:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBox7Click
+        end
+        object SpinEdit1: TSpinEdit
+          Left = 111
+          Top = 22
+          Width = 33
+          Height = 22
+          Enabled = False
+          MaxValue = 5
+          MinValue = 1
+          TabOrder = 1
+          Value = 1
+        end
+      end
+    end
+    object shtLocations: TTabSheet
+      Caption = 'Locations'
+      ImageIndex = 1
+      OnExit = shtLocationsExit
+      object BitBtn2: TBitBtn
+        Left = 584
+        Top = 398
+        Width = 75
+        Height = 25
+        TabOrder = 0
+        OnClick = BitBtn2Click
+        Kind = bkCancel
+      end
+      object GroupBox4: TGroupBox
+        Left = 24
+        Top = 40
+        Width = 631
+        Height = 321
+        Caption = 'Locations'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+        object Label1: TLabel
+          Left = 71
+          Top = 17
+          Width = 92
+          Height = 13
+          Caption = 'Available Locations'
+        end
+        object Label2: TLabel
+          Left = 351
+          Top = 17
+          Width = 91
+          Height = 13
+          Caption = 'Selected Locations'
+        end
+        object ListBox3: TListBox
+          Left = 16
+          Top = 134
+          Width = 73
+          Height = 96
+          ItemHeight = 13
+          TabOrder = 0
+          Visible = False
+        end
+        object ListBox1: TListBox
+          Left = 15
+          Top = 39
+          Width = 280
+          Height = 260
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ItemHeight = 13
+          MultiSelect = True
+          ParentFont = False
+          TabOrder = 1
+        end
+        object ListBox2: TListBox
+          Left = 332
+          Top = 39
+          Width = 280
+          Height = 260
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ItemHeight = 13
+          MultiSelect = True
+          ParentFont = False
+          TabOrder = 2
+        end
+        object ListBox4: TListBox
+          Left = 443
+          Top = 129
+          Width = 89
+          Height = 97
+          ItemHeight = 13
+          TabOrder = 3
+          Visible = False
+        end
+        object BitBtn16: TBitBtn
+          Left = 300
+          Top = 39
+          Width = 25
+          Height = 25
+          Hint = 'Move Right'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+          OnClick = BitBtn16Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+            0000000000000000000000000000000000000000000000000000C0C0C0C0C0C0
+            0000FFC0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF0000000000FF0000FF
+            0000FF0000FF0000FFC0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF0000000000FF0000FF0000FF0000FF0000FF0000FFC0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF0000000000FF0000FF
+            0000FF0000FF0000FFC0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C080
+            0000800000800000800000800000800000800000800000800000C0C0C0C0C0C0
+            0000FFC0C0C0C0C0C0C0C0C0C0C0C0800000FFFFFF800000800000FFFFFF8000
+            00800000FFFFFF800000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C080
+            0000800000800000800000800000800000800000800000800000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+        object BitBtn17: TBitBtn
+          Left = 300
+          Top = 274
+          Width = 25
+          Height = 25
+          Hint = 'Move Left'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 5
+          OnClick = BitBtn17Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C000000000000000000000000000000000000000000000
+            0000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF000000C0C0C0C0C0C0C0C0C00000
+            FFC0C0C0C0C0C0C0C0C0000000FFFFFF000000000000FFFFFF000000000000FF
+            FFFF000000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF000000C0C0C00000FF0000FF0000
+            FF0000FF0000FFC0C0C0000000C0C0C0000000000000C0C0C0000000000000FF
+            FFFF0000000000FF0000FF0000FF0000FF0000FF0000FFC0C0C0000000C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C00000FF0000FF0000
+            FF0000FF0000FFC0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0800000C0C0C0
+            800000800000C0C0C0800000800000C0C0C0800000C0C0C0C0C0C0C0C0C00000
+            FFC0C0C0C0C0C0C0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+        object BitBtn18: TBitBtn
+          Left = 300
+          Top = 117
+          Width = 25
+          Height = 25
+          Hint = 'Move ALL Right'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 6
+          OnClick = BitBtn18Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C000
+            00000000000000000000000000000000000000000000000000000000FF0000FF
+            0000FF0000FF0000FF0000FFC0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF000000C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+            0000FFFFFF000000000000FFFFFF000000000000FFFFFF000000C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C080
+            00008000008000008000008000008000008000008000008000000000FF0000FF
+            0000FF0000FF0000FF0000FFC0C0C0800000FFFFFF800000800000FFFFFF8000
+            00800000FFFFFF800000C0C0C0C0C0C0C0C0C00000FF0000FFC0C0C0C0C0C080
+            0000800000800000800000800000800000800000800000800000C0C0C0C0C0C0
+            C0C0C00000FFC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+        object BitBtn19: TBitBtn
+          Left = 300
+          Top = 196
+          Width = 25
+          Height = 25
+          Hint = 'Move ALL Left'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 7
+          OnClick = BitBtn19Click
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C000000000000000000000000000000000000000000000
+            0000000000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF0000000000FF0000FF0000FF0000
+            FF0000FF0000FFC0C0C0000000FFFFFF000000000000FFFFFF000000000000FF
+            FFFF000000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFFFFF000000C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C0000000C0C0C0000000000000C0C0C0000000000000FF
+            FFFF000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0800000C0C0C0
+            800000800000C0C0C0800000800000C0C0C08000000000FF0000FF0000FF0000
+            FF0000FF0000FFC0C0C080000080000080000080000080000080000080000080
+            0000800000C0C0C00000FF0000FFC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000FFC0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+            C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+        end
+      end
+      object BitBtn11: TBitBtn
+        Left = 496
+        Top = 398
+        Width = 75
+        Height = 25
+        Caption = 'Next'
+        TabOrder = 2
+        OnClick = BitBtn11Click
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000808000000000
+          0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000000000000000000000000000000000000808000008080
+          000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          0000808000008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000000000000000000000000000000000000808000008080
+          000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000808000000000
+          0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+      end
+      object BitBtn12: TBitBtn
+        Left = 408
+        Top = 398
+        Width = 75
+        Height = 25
+        Caption = 'Previous'
+        TabOrder = 3
+        OnClick = BitBtn12Click
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000000000008080000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000808000008080000000000000000000000000
+          00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000000000008080000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000808000008080000000000000000000000000
+          00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000000000008080000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+      end
+    end
+    object shtCriteria: TTabSheet
+      Caption = 'Products'
+      ImageIndex = 2
+      object BitBtn3: TBitBtn
+        Left = 584
+        Top = 398
+        Width = 75
+        Height = 25
+        TabOrder = 0
+        OnClick = BitBtn3Click
+        Kind = bkCancel
+      end
+      object PageControl2: TPageControl
+        Left = 0
+        Top = 35
+        Width = 681
+        Height = 357
+        ActivePage = shtOther
+        MultiLine = True
+        TabIndex = 1
+        TabOrder = 1
+        object shtProducts: TTabSheet
+          Caption = 'Specific Products'
+          object GroupBox1: TGroupBox
+            Left = 6
+            Top = 4
+            Width = 271
+            Height = 317
+            Caption = 'Product List'
+            TabOrder = 0
+            object SpeedButton1: TSpeedButton
+              Left = 12
+              Top = 48
+              Width = 23
+              Height = 22
+              Hint = 'First'
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C00000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0
+                C0000000800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C0000000
+                80000000800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000000080000000
+                80000000800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C00000008000000080000000
+                80000000800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000000080000000
+                80000000800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C0000000
+                80000000800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0
+                C0000000800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C00000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = SpeedButton1Click
+            end
+            object SpeedButton2: TSpeedButton
+              Left = 36
+              Top = 48
+              Width = 23
+              Height = 22
+              Hint = 'Previous'
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000008000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000080000000800000008000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000008000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = SpeedButton2Click
+            end
+            object SpeedButton3: TSpeedButton
+              Left = 60
+              Top = 48
+              Width = 23
+              Height = 22
+              Hint = 'Next'
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000008000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000080000000800000008000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000000080000000
+                800000008000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000080000000800000008000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C00000008000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = SpeedButton3Click
+            end
+            object SpeedButton4: TSpeedButton
+              Left = 84
+              Top = 48
+              Width = 23
+              Height = 22
+              Hint = 'Last'
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C00000008000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C0000000800000008000C0C0C000C0C0C000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000080000000800000008000C0C0C000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C00000008000000080000000800000008000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000080000000800000008000000080000000
+                8000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C00000008000000080000000800000008000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000080000000800000008000C0C0C000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C0000000800000008000C0C0C000C0C0C000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C00000008000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C0008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = SpeedButton4Click
+            end
+            object SpeedButton5: TSpeedButton
+              Left = 132
+              Top = 48
+              Width = 23
+              Height = 22
+              Hint = 'Delete'
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C00000008000FFFFFF00C0C0C000C0C0C000C0C0
+                C000C0C0C00000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000080000000800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C00000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0
+                C000000080000000800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C00000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000080000000800000008000FFFFFF00C0C0C000C0C0C000C0C0
+                C0000000800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000080000000800000008000FFFFFF00C0C0C0000000
+                800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000080000000800000008000000080000000
+                8000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000080000000800000008000FFFF
+                FF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000080000000800000008000000080000000
+                8000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000080000000800000008000FFFFFF00C0C0C0000000
+                8000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C00000008000000080000000800000008000FFFFFF00C0C0C000C0C0C000C0C0
+                C0000000800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C0000000
+                8000000080000000800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C0000000800000008000FFFFFF00C0C0C000C0C0C000C0C0C0000000
+                800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C0000000800000008000FFFFFF00C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = SpeedButton5Click
+            end
+            object SpeedButton6: TSpeedButton
+              Left = 108
+              Top = 48
+              Width = 23
+              Height = 22
+              Hint = 'Add'
+              Glyph.Data = {
+                36030000424D3603000000000000360000002800000010000000100000000100
+                18000000000000030000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000008000
+                0080000080C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0000080000080000080C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000008000
+                0080000080C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0000080000080000080C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000008000008000008000008000008000
+                0080000080000080000080000080000080C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                0000800000800000800000800000800000800000800000800000800000800000
+                80C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000008000008000008000008000008000
+                0080000080000080000080000080000080C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0000080000080000080C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000008000
+                0080000080C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0000080000080000080C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000008000
+                0080000080C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+                C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = SpeedButton6Click
+            end
+            object SpeedButton7: TSpeedButton
+              Left = 155
+              Top = 48
+              Width = 23
+              Height = 22
+              Hint = 'Save List'
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000008000FFFF
+                FF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000008000000080000000
+                8000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C0000000800000008000000080000000
+                8000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+                0000000000000000000000000000000080000000800000008000808080000000
+                800000008000FFFFFF00C0C0C000C0C0C000C0C0C000C0C0C00000000000FFFF
+                FF00FFFFFF00FFFFFF00000080000000800000008000FFFFFF00FFFFFF00FFFF
+                FF000000800000008000FFFFFF00C0C0C000C0C0C000C0C0C00000000000FFFF
+                FF008080800080808000FFFFFF0000008000FFFFFF008080800080808000FFFF
+                FF008080800000008000FFFFFF00C0C0C000C0C0C000C0C0C00000000000FFFF
+                FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF0000000000C0C0C00000008000FFFFFF00C0C0C000C0C0C000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000
+                000000000000C0C0C000C0C0C00000008000FFFFFF00C0C0C00000000000FFFF
+                FF00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF0000000000C0C0C000C0C0C000C0C0C00000008000FFFFFF0000000000FFFF
+                FF00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF0000000000C0C0C000C0C0C000C0C0C000C0C0C00000008000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000
+                000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000
+                000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = SpeedButton7Click
+            end
+            object BitBtn20: TBitBtn
+              Left = 98
+              Top = 284
+              Width = 75
+              Height = 25
+              Caption = 'Clear All'
+              TabOrder = 0
+              OnClick = BitBtn20Click
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000080000000
+                8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000008000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000080000000
+                800000008000C0C0C000C0C0C000C0C0C00000008000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                800000008000C0C0C000C0C0C0000000800000008000C0C0C000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000
+                000000000000000080000000800080008000C0C0C000C0C0C00000000000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000800080000000800000008000C0C0C000C0C0C000C0C0C00000000000C0C0
+                C0000000000000000000C0C0C0000000000000000000C0C0C00000000000C0C0
+                C00000008000800080000000800000008000C0C0C000C0C0C00000000000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                800000008000C0C0C000C0C0C000000080000000800080008000000000008000
+                0000800000008000000080000000800000008000000080008000000080008000
+                0000800000008000000080000000C0C0C0008000800000008000C0C0C0008000
+                0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000800080008000FFFF
+                FF00FFFFFF00FFFFFF0080000000C0C0C000C0C0C000C0C0C000C0C0C0008000
+                0000FFFFFF000000000000000000FFFFFF000000000000000000FFFFFF000000
+                000000000000FFFFFF0080000000C0C0C000C0C0C000C0C0C000C0C0C0008000
+                0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+                FF00FFFFFF00FFFFFF0080000000C0C0C000C0C0C000C0C0C000C0C0C0008000
+                0000800000008000000080000000800000008000000080000000800000008000
+                0000800000008000000080000000C0C0C000C0C0C000C0C0C000C0C0C0008000
+                0000C0C0C0008000000080000000C0C0C0008000000080000000C0C0C0008000
+                000080000000C0C0C00080000000C0C0C000C0C0C000C0C0C000C0C0C0008000
+                0000800000008000000080000000800000008000000080000000800000008000
+                0000800000008000000080000000C0C0C000C0C0C000C0C0C000}
+            end
+            object lstProd: TListBox
+              Left = 10
+              Top = 75
+              Width = 240
+              Height = 201
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlue
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              ItemHeight = 13
+              ParentFont = False
+              TabOrder = 1
+              OnDragDrop = lstProdDragDrop
+              OnDragOver = lstProdDragOver
+            end
+          end
+          object GroupBox2: TGroupBox
+            Left = 282
+            Top = 4
+            Width = 384
+            Height = 317
+            Caption = 'Product Search'
+            TabOrder = 1
+            object Edit1: TEdit
+              Left = 67
+              Top = 19
+              Width = 177
+              Height = 21
+              TabOrder = 0
+            end
+            object DBGrid2: TDBGrid
+              Left = 11
+              Top = 75
+              Width = 360
+              Height = 204
+              DataSource = dmUpdateSpecial.srcSearchProd
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlue
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 1
+              TitleFont.Charset = DEFAULT_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'MS Sans Serif'
+              TitleFont.Style = []
+              OnDblClick = DBGrid2DblClick
+              OnMouseDown = DBGrid2MouseDown
+            end
+            object DBNavigator2: TDBNavigator
+              Left = 68
+              Top = 46
+              Width = 244
+              Height = 25
+              VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+              TabOrder = 2
+            end
+            object BitBtn4: TBitBtn
+              Left = 139
+              Top = 285
+              Width = 106
+              Height = 25
+              Caption = '&Add to List'
+              TabOrder = 3
+              OnClick = BitBtn4Click
+              Kind = bkYes
+            end
+            object BitBtn15: TBitBtn
+              Left = 260
+              Top = 16
+              Width = 75
+              Height = 25
+              Caption = 'Find'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clRed
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 4
+              OnClick = BitBtn15Click
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+                0000000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C0000000000000000000000000000000000000000000C0C0C00000000000FFFF
+                FF00000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C00000000000FFFFFF00000000000000000000000000C0C0C00000000000FFFF
+                FF00000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C00000000000FFFFFF00000000000000000000000000C0C0C000000000000000
+                00000000000000000000000000000000000000000000C0C0C000000000000000
+                00000000000000000000000000000000000000000000C0C0C000000000000000
+                0000FFFFFF00000000000000000000000000000000000000000000000000FFFF
+                FF000000000000000000000000000000000000000000C0C0C000000000000000
+                0000FFFFFF00000000000000000000000000C0C0C0000000000000000000FFFF
+                FF000000000000000000000000000000000000000000C0C0C000000000000000
+                0000FFFFFF00000000000000000000000000C0C0C0000000000000000000FFFF
+                FF000000000000000000000000000000000000000000C0C0C000C0C0C0000000
+                0000000000000000000000000000000000000000000000000000000000000000
+                000000000000000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0
+                C00000000000FFFFFF00000000000000000000000000C0C0C00000000000FFFF
+                FF00000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C0000000000000000000000000000000000000000000C0C0C000000000000000
+                0000000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000000000000000000000C0C0C000C0C0C000C0C0C0000000
+                00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C00000000000FFFFFF0000000000C0C0C000C0C0C000C0C0C0000000
+                0000FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000000000000000000000C0C0C000C0C0C000C0C0C0000000
+                00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+            end
+          end
+        end
+        object shtOther: TTabSheet
+          Caption = 'Other Criteria'
+          ImageIndex = 1
+          object Label3: TLabel
+            Left = 192
+            Top = 16
+            Width = 41
+            Height = 20
+            Caption = 'SQL:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -16
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Memo1: TMemo
+            Left = 176
+            Top = 40
+            Width = 457
+            Height = 233
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlue
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            Lines.Strings = (
+              '')
+            ParentFont = False
+            TabOrder = 0
+            OnChange = Memo1Change
+          end
+          object BitBtn5: TBitBtn
+            Left = 16
+            Top = 40
+            Width = 129
+            Height = 25
+            Hint = 'Use the wizard to add SQL based on group data'
+            Caption = 'SQL Wizard'
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+            OnClick = BitBtn5Click
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+              0000C0C0C0000000000000000000C0C0C0000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+              0000C0C0C0000000000000000000C0C0C0000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C00080808000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000000000000000000000000000C0C0C0008080
+              8000C0C0C000C0C0C00080808000FF00000080808000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000000000000000000000000000C0C0C00080808000FF00
+              000080808000C0C0C000C0C0C00080808000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000000000000000000000000000C0C0C000C0C0C000C0C0C0008080
+              8000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+              00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C00080808000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+              000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00080808000FF00000080808000C0C0C000C0C0C00000000000000000000000
+              0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C00080808000C0C0C000C0C0C0000000000000FFFF0000000000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C0000000000000FFFF0000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C0008080800000000000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+          end
+          object BitBtn6: TBitBtn
+            Left = 16
+            Top = 124
+            Width = 129
+            Height = 25
+            Hint = 'Load SQL from a file'
+            Caption = 'Load SQL from File'
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 2
+            OnClick = BitBtn6Click
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+              0000008080000080800000808000008080000080800000808000008080000080
+              80000080800000000000C0C0C000C0C0C000C0C0C000C0C0C0000000000000FF
+              FF00000000000080800000808000008080000080800000808000008080000080
+              8000008080000080800000000000C0C0C000C0C0C000C0C0C00000000000FFFF
+              FF0000FFFF000000000000808000008080000080800000808000008080000080
+              800000808000008080000080800000000000C0C0C000C0C0C0000000000000FF
+              FF00FFFFFF0000FFFF0000000000008080000080800000808000008080000080
+              80000080800000808000008080000080800000000000C0C0C00000000000FFFF
+              FF0000FFFF00FFFFFF0000FFFF00000000000000000000000000000000000000
+              00000000000000000000000000000000000000000000000000000000000000FF
+              FF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FF
+              FF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000FFFF
+              FF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFF
+              FF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000FF
+              FF00FFFFFF0000FFFF0000000000000000000000000000000000000000000000
+              000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+              00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000000000000000000000000000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0
+              C000C0C0C000C0C0C00000000000C0C0C00000000000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+              00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+          end
+          object BitBtn7: TBitBtn
+            Left = 16
+            Top = 166
+            Width = 129
+            Height = 25
+            Hint = 'Save current SQL to a file'
+            Caption = 'Save SQL to File'
+            Enabled = False
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 3
+            OnClick = BitBtn7Click
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000000000000000000000000000000000000000000000000000000000000000
+              00000000000000000000000000000000000000000000C0C0C000C0C0C0000000
+              0000008080000080800000000000000000000000000000000000000000000000
+              0000C0C0C000C0C0C000000000000080800000000000C0C0C000C0C0C0000000
+              0000008080000080800000000000000000000000000000000000000000000000
+              0000C0C0C000C0C0C000000000000080800000000000C0C0C000C0C0C0000000
+              0000008080000080800000000000000000000000000000000000000000000000
+              0000C0C0C000C0C0C000000000000080800000000000C0C0C000C0C0C0000000
+              0000008080000080800000000000000000000000000000000000000000000000
+              00000000000000000000000000000080800000000000C0C0C000C0C0C0000000
+              0000008080000080800000808000008080000080800000808000008080000080
+              80000080800000808000008080000080800000000000C0C0C000C0C0C0000000
+              0000008080000080800000000000000000000000000000000000000000000000
+              00000000000000000000008080000080800000000000C0C0C000C0C0C0000000
+              00000080800000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000000000000080800000000000C0C0C000C0C0C0000000
+              00000080800000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000000000000080800000000000C0C0C000C0C0C0000000
+              00000080800000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000000000000080800000000000C0C0C000C0C0C0000000
+              00000080800000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000000000000080800000000000C0C0C000C0C0C0000000
+              00000080800000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000000000000000000000000000C0C0C000C0C0C0000000
+              00000080800000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C00000000000C0C0C00000000000C0C0C000C0C0C0000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              00000000000000000000000000000000000000000000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+          end
+          object BitBtn8: TBitBtn
+            Left = 16
+            Top = 82
+            Width = 129
+            Height = 25
+            Hint = 'Clear the group SQL'
+            Caption = 'Clear SQL'
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 4
+            OnClick = BitBtn8Click
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+              FF00FFFFFF00FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+              0000000000000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+              0000FFFFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+              000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000000000000000000000000000000000000000000000000000000000000000
+              0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+          end
+          object BitBtn9: TBitBtn
+            Left = 176
+            Top = 280
+            Width = 89
+            Height = 25
+            Caption = 'Undo Last'
+            TabOrder = 5
+            OnClick = BitBtn9Click
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C0008080800080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C0008000000080000000800000008000000080000000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C0008000000080808000C0C0C000C0C0C000C0C0C000C0C0
+              C00080000000800000008000000080000000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C00080000000C0C0C000C0C0C000C0C0C000C0C0
+              C000800000008000000080000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C00080000000C0C0C000C0C0C000C0C0C000C0C0
+              C0008000000080000000C0C0C00080000000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C00080000000C0C0C000C0C0C000C0C0C000C0C0
+              C00080000000C0C0C000C0C0C000C0C0C0008000000080000000C0C0C000C0C0
+              C000C0C0C000C0C0C0008000000080808000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000800000008000
+              0000800000008000000080808000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+          end
+          object BitBtn21: TBitBtn
+            Left = 16
+            Top = 208
+            Width = 129
+            Height = 25
+            Hint = 'View products based on the current SQL'
+            Caption = 'View Products '
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 6
+            OnClick = BitBtn21Click
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+              0000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000000000
+              000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+              00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000000000000000000000000000C0C0C0008080800000000000000000000000
+              00000000000080808000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C00000000000000000000000000000000000C0C0C000C0C0C000C0C0
+              C000C0C0C0000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C0000000000080808000FFFF0000FFFF0000C0C0C000C0C0
+              C000C0C0C000C0C0C0008080800000000000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C0008080800000000000C0C0C000FFFF0000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C0000000000080808000C0C0C000C0C0C000C0C0
+              C000C0C0C00000000000C0C0C000FFFF0000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C000C0C0
+              C000C0C0C00000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0C000C0C0
+              C000C0C0C00000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000FFFF0000C0C0C00000000000C0C0C000C0C0C000C0C0
+              C000C0C0C00000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000FFFF0000C0C0C00000000000C0C0C000C0C0C000C0C0
+              C000C0C0C0008080800000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000FFFF0000FFFF00000000000080808000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C0000000000080808000C0C0C000C0C0C000C0C0C000FFFF
+              0000FFFF0000FFFF00008080800000000000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0C000C0C0C000C0C0
+              C000C0C0C0000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+              C000C0C0C000C0C0C000C0C0C000C0C0C0008080800000000000000000000000
+              00000000000080808000C0C0C000C0C0C000C0C0C000C0C0C000}
+          end
+        end
+      end
+      object chkProducts: TCheckBox
+        Left = 32
+        Top = 8
+        Width = 107
+        Height = 17
+        Caption = 'Specific Products'
+        Checked = True
+        State = cbChecked
+        TabOrder = 2
+        OnClick = chkProductsClick
+      end
+      object chkOther: TCheckBox
+        Left = 200
+        Top = 8
+        Width = 145
+        Height = 17
+        Caption = 'Specify Criteria for Groups'
+        TabOrder = 3
+        OnClick = chkOtherClick
+      end
+      object BitBtn13: TBitBtn
+        Left = 408
+        Top = 398
+        Width = 75
+        Height = 25
+        Caption = 'Previous'
+        TabOrder = 4
+        OnClick = BitBtn13Click
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000000000008080000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000808000008080000000000000000000000000
+          00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000000000008080000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C0000000000080800000808000008080000080800000808000008080
+          00008080000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000808000008080000000000000000000000000
+          00000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000000000008080000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C0000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00000000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+      end
+      object BitBtn14: TBitBtn
+        Left = 496
+        Top = 398
+        Width = 75
+        Height = 25
+        Caption = 'Update'
+        TabOrder = 5
+        OnClick = BitBtn14Click
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000C0C0C00000000000C0C0C00000000000C0C0
+          C00000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C0000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000000000000000000000000000000000000000
+          00000000000000FFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF000000000000FFFF0000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000FFFFFF000000FF000000FF000000FF000000
+          FF000000000000FFFF0000FFFF0000000000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF000000000000FFFF0000000000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000FFFFFF000000FF000000FF000000FF000000
+          FF000000FF000000000000FFFF0000FFFF0000000000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C00000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF0000000000000000000000000000000000C0C0C000C0C0
+          C000C0C0C00080000000FFFFFF00FFFFFF000000FF000000FF000000FF000000
+          FF000000FF00FFFFFF0000000000000080000000800000000000C0C0C000C0C0
+          C000800000008000000080000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00000000000000000000000000C0C0C000C0C0C0008000
+          000080000000800000008000000080808000FFFFFF000000FF000000FF00FFFF
+          FF0000000000000000000000000080808000C0C0C000C0C0C000800000008000
+          000080000000C0C0C0008000000080000000FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF0000000000FFFFFF0000000000C0C0C000C0C0C000C0C0C000808080008000
+          0000C0C0C000C0C0C000C0C0C0008000000080000000FFFFFF00FFFFFF00FFFF
+          FF000000000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C0008000000080808000FFFFFF000000
+          000000000000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00080000000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C00080000000C0C0
+          C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 475
+    Width = 688
+    Height = 19
+    Panels = <
+      item
+        Text = 'Database:'
+        Width = 60
+      end
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '*.sql'
+    Filter = 'SQL Files|*.sql|Text Files|*.txt|ALL Files|*.*'
+    Left = 352
+    Top = 419
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '*.sql'
+    Filter = 'SQL Files|*.sql|Text Files|*.txt|ALL Files|*.*'
+    Left = 400
+    Top = 419
+  end
+  object MainMenu1: TMainMenu
+    Images = ImageList1
+    Left = 448
+    object File1: TMenuItem
+      Caption = '&File'
+      object LoadSQL1: TMenuItem
+        Caption = '&Load SQL'
+        ImageIndex = 0
+        OnClick = LoadSQL1Click
+      end
+      object SaveSQL1: TMenuItem
+        Caption = '&Save SQL'
+        Enabled = False
+        ImageIndex = 1
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = 'E&xit'
+        ImageIndex = 3
+        OnClick = Exit1Click
+      end
+    end
+    object About1: TMenuItem
+      Caption = '&Edit'
+      object Version1: TMenuItem
+        Caption = '&Undo Last SQL'
+        Enabled = False
+        ImageIndex = 2
+        OnClick = Version1Click
+      end
+    end
+    object About2: TMenuItem
+      Caption = '&Help'
+      object About3: TMenuItem
+        Caption = '&About'
+        OnClick = About3Click
+      end
+    end
+  end
+  object ImageList1: TImageList
+    Left = 504
+    Bitmap = {
+      494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      0000000000003600000028000000400000003000000001002000000000000030
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000080
+      8000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000008080000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000080
+      8000008080000080800000808000008080000080800000808000008080000000
+      0000000000000000000000000000000000000000000000000000008080000080
+      8000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000080
+      8000008080000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000FFFF00000000000080
+      8000008080000080800000808000008080000080800000808000008080000080
+      8000000000000000000000000000000000000000000000000000008080000080
+      8000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000080
+      8000008080000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000FFFFFF0000FFFF000000
+      0000008080000080800000808000008080000080800000808000008080000080
+      8000008080000000000000000000000000000000000000000000008080000080
+      8000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008080
+      8000800000000000000000000000000000000000000000000000008080000080
+      80000080800000000000FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000000000000000000000000000000000000000FFFF00FFFFFF0000FF
+      FF00000000000080800000808000008080000080800000808000008080000080
+      8000008080000080800000000000000000000000000000000000008080000080
+      8000008080000080800000808000008080000080800000808000008080000080
+      8000008080000080800000000000000000000000000000000000800000008000
+      0000800000008000000080000000000000000000000000000000000000000000
+      0000800000008080800000000000000000000000000000000000008080000080
+      80000000000000000000FFFFFF00FFFFFF000000000000000000000000000000
+      00000000000080000000000000000000000000000000FFFFFF0000FFFF00FFFF
+      FF0000FFFF000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000080
+      8000000000000000000000000000000000000000000000000000000000000000
+      0000008080000080800000000000000000000000000000000000800000008000
+      0000800000008000000000000000000000000000000000000000000000000000
+      0000000000008000000000000000000000000000000000000000008080000080
+      80000080800000000000FFFFFF00FFFFFF000000000000000000000000000000
+      0000800000008000000000000000000000000000000000FFFF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00000000000000
+      0000000000000000000000000000000000000000000000000000008080000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000800000008000
+      0000800000000000000000000000000000000000000000000000000000000000
+      0000000000008000000000000000000000000000000000000000008080000080
+      80000080800000000000FFFFFF00FFFFFF000000000000000000000000008000
+      00008000000080000000800000008000000000000000FFFFFF0000FFFF00FFFF
+      FF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF00000000000000
+      0000000000000000000000000000000000000000000000000000008080000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000800000008000
+      0000000000008000000000000000000000000000000000000000000000000000
+      0000000000008000000000000000000000000000000000000000008080000080
+      80000080800000000000FFFFFF00FFFFFF000000000000000000800000008000
+      0000800000008000000080000000800000000000000000FFFF00FFFFFF0000FF
+      FF00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000800000000000
+      0000000000000000000080000000800000000000000000000000000000000000
+      0000800000008080800000000000000000000000000000000000008080000080
+      80000080800000000000FFFFFF00FFFFFF000000000000000000000000008000
+      0000800000008000000080000000800000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000080800000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000008000000080000000800000008000
+      0000808080000000000000000000000000000000000000000000008080000080
+      800000000000FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000800000008000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000000
+      0000FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000008000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000008080000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000424D3E000000000000003E000000
+      2800000040000000300000000100010000000000800100000000000000000000
+      000000000000000000000000FFFFFF0000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000FFFFFFFFFFFFFBFFFFFFC001FFFFF3FF
+      001F8031FFFFE3FF000F8031FFFFC3FF00078031FFFF000700038001FFE7807F
+      00018001C1F3807B00008001C3FB8073001F8FF1C7FB8060001F8FF1CBFB8040
+      001F8FF1DCF380608FF18FF1FF078073FFF98FF1FFFF807BFF758FF5FFFF807F
+      FF8F8001FFFF807FFFFFFFFFFFFFFFFF00000000000000000000000000000000
+      000000000000}
+  end
+end

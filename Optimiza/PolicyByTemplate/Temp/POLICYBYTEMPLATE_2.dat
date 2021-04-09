@@ -1,0 +1,9 @@
+User No=2
+Template No=1234
+Update=,LT,RC,RP
+Locations=Location,NSWSKU,QLDSKU,SAUSKU,TASSKU,WAUSKU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+NSWSKU=NSWSKU,0.07,0.5,0.12,,,"NSW -   Total SKU"
+QLDSKU=QLDSKU,0.07,0.5,0.5,,,"QLD -   Total SKU"
+SAUSKU=SAUSKU,0.07,0.5,0.12,,,"SA -   Total SKU"
+TASSKU=TASSKU,0.07,0.5,0.12,,,"TAS -   Total SKU"
+WAUSKU=WAUSKU,0.07,0.5,0.12,,,"WA -  SKU"

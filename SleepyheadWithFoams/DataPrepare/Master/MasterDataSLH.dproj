@@ -102,9 +102,11 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <VerInfo_MinorVer>4</VerInfo_MinorVer>
+        <VerInfo_MinorVer>5</VerInfo_MinorVer>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=3.4.1.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=3.5.1.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <Debugger_RunParams>D:\Optimiza\Sleepmaker\Specials\Master.ini</Debugger_RunParams>
+        <Debugger_CWD>D:\Optimiza\Sleepmaker\Specials</Debugger_CWD>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -120,11 +122,11 @@
             <Form>dmData</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="O:\Optimiza\UDMOPTIMIZA.pas">
+        <DCCReference Include="P:\Optimiza\UDMOPTIMIZA.pas">
             <Form>dmOptimiza</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="O:\Optimiza\uSelectOneLocation.pas">
+        <DCCReference Include="P:\Optimiza\uSelectOneLocation.pas">
             <Form>frmSelectOneLocation</Form>
         </DCCReference>
         <DCCReference Include="..\..\uCompany.pas"/>

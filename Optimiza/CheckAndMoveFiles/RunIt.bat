@@ -1,0 +1,1 @@
+"O:\Optimiza\CheckAndMoveFiles\CheckAndMoveFiles.bat" "O:\Optimiza\CheckAndMoveFiles" "*.txt" ",170 ,172" "O:\Optimiza\CheckAndMoveFiles\170Folder" "O:\Optimiza\CheckAndMoveFiles\840Folder" "O:\Optimiza\CheckAndMoveFiles\ProcessedFolder"

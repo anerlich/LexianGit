@@ -1,0 +1,1 @@
+fbexport -Si -V UT_DISAGMETHOD -D "D:\Optimiza\WWFORECAST\DataBase\WWFORECAST.GDB" -U sysdba -P masterkey -F UT_DISAGMETHOD.sql
