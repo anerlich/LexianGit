@@ -1,0 +1,14 @@
+ProdClass       LocCode    Description
+XPBEXPCHN       AI         Airland, Sleepmaker (China)
+XPBBEDPOST      BP         Bedpost
+XPBT20390       BS         Big Save
+XPBS00BRU       BR         Beds R Us
+XPBT20100       BB         Back to Bed
+XPBSCONTR       CM         Commercial
+XPBS0COMP       CP         Composite
+XPBT00FTC       FM         Farmers
+XPBS00495       FM         Farmers 
+XPBS00FUR       FU         Furniture City
+XPBHARNORM      HN         Harvey Norman
+XPBS00MKW       MW         McKenzie & Willis
+XPBS00600       SC         Smiths City

@@ -1,0 +1,13 @@
+ started on 7/10/2011 10:38:52 PM
+Start
+Parameter File: O:\Sleepyhead\DataPrepare\BomData\BomData.ini
+Opening and building lookup : e:\Optimiza\Sleepmaker\Data\Lookup.txt
+Records in Lookup: 121041
+Lookup File not in use.
+Creating Exceptions : E:\OPTIMIZA\SLEEPMAKER\DATA\BOM_Except.csv
+Creating : e:\Optimiza\Sleepmaker\Data\Bom.csv
+Opening : e:\Optimiza\Sleepmaker\Data\PFFPET.txt
+***  failed
+*** File not found
+ finished on 7/10/2011 10:39:05 PM
+Elapsed Time: 12.86 seconds

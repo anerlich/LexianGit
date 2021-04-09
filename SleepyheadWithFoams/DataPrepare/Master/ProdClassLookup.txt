@@ -1,0 +1,37 @@
+ProdClass       LocCode    Description
+AM              AM         Amart
+AMC             AU         Aussie Mattresses
+BEG             ZZ         Other
+BPL             ZZ         Other
+BRU             BR         Beds R Us
+BRUC            BR         Beds R Us
+BS              BS         BedShed
+CLR             ZZ         Other
+COMMSM          CM         Commercial
+COMM            CM         Commercial
+DJ              DJ         David Jones
+DOM             DM         Domayne
+Dream           ZZ         Other
+F1              CM         Commercial
+FAN             ZZ         Other
+FC              BR         Beds R Us
+FH              BR         Beds R Us
+FW              FW         Forty Winks
+GEN             ZZ         Other
+HARVEY          HN         Harvey Norman
+JM              ZZ         Other
+MYER            MY         Myer
+OTHER           ZZ         Other
+SC              ZZ         SleepCity (NEW customer location required, is this possible?)
+SER             ZZ         Other
+SG              ZZ         Other
+SLEEPYs         SM         Sleepys
+SNOOZE          CS         Snooze
+SP              ZZ         Other
+SS              ZZ         Other
+SZ              ZZ         Other
+SZONE           ZZ         Other
+TAT             ZZ         Other
+XPBDESIGN       ZZ         Other
+
+

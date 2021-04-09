@@ -1,0 +1,58 @@
+category  LocCode   Customer [] in customer name denotes exception list and will appear in CSV
+AM        AM        Amart	New
+AMC       ZZ        Aussie Mattress(was AU)
+BR        BR        Beds R Us	New
+BP        ZZ        Beds Plus	New
+EXP       EX        Exports
+FW        FW        40 Winks
+HN        HN        Harvey Norman
+DM        DM        Domayne  
+DO        DM        Domayne  
+CO        CM        Commercial  
+CP        CM        Commercial
+MY        MY        Myer
+DJ        DJ        David Jones
+SM        SM        Sleepys
+SN        CS        Capt Snooze
+BS        BS        Bedshed 
+FC        BR        Other
+FRE       FR        Freedom
+IN	  ZZ        Other	
+MS        ZZ        Other	
+PR        ZZ        Other	
+FH        BR        Other
+NZ        ZZ        Other	
+IR        ZZ        Other	
+SZ        ZZ        Other
+FO        ZZ        Other
+NZ        ZZ        Other	
+IR        ZZ        Other	
+SZ        ZZ        Other
+FO        ZZ        Other
+SFO       ZZ        Other
+AD        ZZ        Other	
+UL        ZZ        Other
+SG        ZZ        Other
+SF        ZZ        Other
+IRP       ZZ        Other
+99        ZZ        Other
+IN        ZZ        Other
+SC        ZZ        Other
+JM        ZZ        Other
+ZZ        ZZ        Other
+AC        CM        Commercial
+BD        ZZ        Other
+BSR       ZZ        Other
+DL        ZZ        Other
+OT        ZZ        Other
+SD        ZZ        Other
+          ZZ        [Exception List] - Others - if Blank 
+[99]      ZZ        [Exception List] - Others - if none of the above cats
+##################################################################
+#Comment Lines start with #
+#
+# Where CUSTOMER name column contains [] then these will be logged in the exception file
+#
+# Where CATEGORY column contains [] then this will be the default if not any of the other categories
+#      and the customer name can optionally contain [] to log in the exception file.
+	Other	

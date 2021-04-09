@@ -1,0 +1,47 @@
+Warehouse State     LocCode   Description
+V1        VIC       VICSKU
+V2        VIC       VICSKU
+V3        VIC       VICSKU
+V4        VIC       VICSKU
+N1        NSW       NSWSKU
+N2        NSW       NSWSKU
+N3        NSW       NSWSKU
+N4        NSW       NSWSKU
+Q1        QLD       QLDSKU
+Q2        QLD       QLDSKU
+Q3        QLD       QLDSKU
+Q4        QLD       QLDSKU
+QL        QLD       QLDSKU
+T1        TAS       TASSKU
+T2        TAS       TASSKU
+T3        TAS       TASSKU
+T4        TAS       TASSKU
+W1        WA        WAUSKU
+W2        WA        WAUSKU
+W3        WA        WAUSKU
+W4        WA        WAUSKU
+S1        SA        SAUSKU
+S2        SA        SAUSKU
+S3        SA        SAUSKU
+S4        SA        SAUSKU
+X1        IWT       IWTSKU
+VI        VIC       VICSKU
+VIC       VIC       VICSKU
+SA        SA        SAUSKU
+TAS       TAS       TASSKU
+WA        WA        WAUSKU
+QLD       QLD       QLDSKU
+NSW       NSW       NSWSKU
+bris_App  QLD       QLDSKU
+melb_App  VIC       VICSKU
+perth_App WA        WAUSKU
+sydn_App  NSW       NSWSKU
+tasm_App  TAS       TASSKU
+Auck_App  NTH       NTHSKU    NZ
+Chch_App  STH       STHSKU    NZ
+ADEL_JBA  SA        SAUFP
+BRIS_JBA  QLD       QLDFP
+MELB_JBA  VIC       VICFP
+PERTH_JBA WA        WAUFP
+SYDN_JBA  NSW       NSWFP
+TASM_JBA  TAS       TASFP

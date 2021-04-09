@@ -1,0 +1,12 @@
+ started on 9/10/2011 8:03:23 PM
+Start
+Parameter File: O:\Sleepyhead\DataPrepare\StockData\stock.ini
+Opening and building lookup : e:\Optimiza\Sleepmaker\Data\Lookup.txt
+Records in Lookup: 121041
+Creating : e:\Optimiza\Sleepmaker\Data\stock_FG.csv
+Creating Exceptions : E:\OPTIMIZA\SLEEPMAKER\DATA\STOCK_FG_Except.csv
+Opening : e:\Optimiza\Sleepmaker\Data\pffpIn_ex.txt
+Records read : 9115
+Records written : 9112
+ finished on 9/10/2011 8:03:28 PM
+Elapsed Time: 4.78 seconds
