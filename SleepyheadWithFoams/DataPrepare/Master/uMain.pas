@@ -23,7 +23,7 @@
 // Version 3.2  - Add headboards to model list
 // Version 3.3  - remove output to VICSKUTMP
 // Version 3.4  - include MinSSUnits field
-// Version 3.5  - include 5 more fields IMSSITE,IMSWHSE,IMFGMODEL,IMFGRANGE,IMUWEIGHT, only 4 used (not IMSWHSE)
+// Version 3.5  - include 5 more fields IMSSITE,IMSWHSE,IMFGMODEL,IMFGRANGE,IMUWEIGHT, only 4 used (not IMSWHSE) trim first 4 to 30 characters
 
 unit uMain;
 interface
@@ -412,11 +412,11 @@ begin
               SkuOutStr := SkuOutStr + ',' + StyleColour + ',' + Datarecord[_Supplier] + ','  + Datarecord[_SupplierName]
                     + ','  + SF
                     + ','  + StkInd
-                    + ',' + DataRecord[_MinSSUnits]
-                    + ',' + DataRecord[_SSite]
-                    + ',' + DataRecord[_SWhse]
-                    + ',' + DataRecord[_FGModel]
-                    + ',' + DataRecord[_FGRange]
+                    + ',' + DataRecord[_MinSSUnits].Substring(0,30)
+                    + ',' + DataRecord[_SSite].Substring(0,30)
+                    + ',' + DataRecord[_SWhse].Substring(0,30)
+                    + ',' + DataRecord[_FGModel].Substring(0,30)
+                    + ',' + DataRecord[_FGRange].Substring(0,30)
                     + ',' + DataRecord[_UWeight];
 
               StyleOutStr := GetOutStr_SL(OutStr,
@@ -429,11 +429,11 @@ begin
               StyleOutStr := StyleOutStr + ',' + StyleColour+ ',' + Datarecord[_Supplier] + ','  + Datarecord[_SupplierName]
                     + ','  + SF
                     + ','  + StkInd
-                    + ',' + DataRecord[_MinSSUnits]
-                    + ',' + DataRecord[_SSite]
-                    + ',' + DataRecord[_SWhse]
-                    + ',' + DataRecord[_FGModel]
-                    + ',' + DataRecord[_FGRange]
+                    + ',' + DataRecord[_MinSSUnits].Substring(0,30)
+                    + ',' + DataRecord[_SSite].Substring(0,30)
+                    + ',' + DataRecord[_SWhse].Substring(0,30)
+                    + ',' + DataRecord[_FGModel].Substring(0,30)
+                    + ',' + DataRecord[_FGRange].Substring(0,30)
                     + ',' + DataRecord[_UWeight];
             end;
 
